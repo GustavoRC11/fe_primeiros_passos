@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Importa o CSS do template (principal) -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- folhas de estilo somente desta página -->
+    
     <title>FirstSteps</title>
 </head>
 
@@ -23,21 +25,29 @@
                 </a>
                  <h1>FirstSteps</h1>
             </div>
-            <form class =".header-search" action="https://www.google.com/search" target="_blank" method="get">
-                <input type="search" name="q">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-fw"></i></button>
+            <form class="header-search" action="https://www.google.com/search" target="_blank" method="get">
+                <input type="search" name="q" placeholder="Pesquisar...">
+                <button type="submit" title="Clique para pesquisar"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-fw"></i></button>
             </form>
 
          </header>
 
-        <nav>
+        <nav aria-label="Menu principal">
 
-            <a href="index.html">Início</a>
-            <a href="content.html">Conteúdo</a>
-            <a href="contacts.html">Contatos</a>
-            <a href="about.html">Sobre</a>
+            <a href="index.html" title="Página inicial">
+                <i class="fa-solid fa-house fa-fw"></i>
+                    <span>início</span></a>
+            <a href="content.html" title="Conteúdo do site" aria-label="Conteúdo do Site">
+               <i class="fa-solid fa-file-lines fa-fw"></i>
+               <span>Conteúdo</span></a>
+            <a href="contacts.html" title="Faça contato" aria-label="Faça contato">
+                <i class="fa-solid fa-comments fa-fw"></i>
+                <span>Contatos</span></a>
+            <a href="about.html" title=" Mais informações" aria-label="Mais informações">
+                <i class="fa-solid fa-circle-info fa-fw"></i>
+                <span>Sobre</span></a>
 
-        </nav>
+        </nav >
 
         <main>
 

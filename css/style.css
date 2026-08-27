@@ -16,6 +16,24 @@ Referências: https://fontawesome.com
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css');
 
 
+:root {
+     --wrap-max-width: 1080px;
+    --defult-links: steelblue;
+    --deful-links-hover: orangered;
+    --backgroud-image:url("../img/logo02.jpg");
+     --body-background-color: rgb(180, 180, 180);
+    --header-background-color: orange;
+    --header-logo-font: Arial, helvetica, sans-serif;
+    --header-title-stroke: .75px white;
+    --nav-footer-background-color: black;
+    --aside-background-color:#eee;
+    --top-search-border:3px dotted white;
+    --nav-menu-color: white;
+    --nav-menu-hover-color: white;
+    --nav-menu-hover-bg-color: rgba(255,255,255,.4);
+}
+
+
 /* Reset Geral */
 * {
     box-sizing: border-box;
@@ -26,7 +44,8 @@ Referências: https://fontawesome.com
 html,
 body {
     /* Reset nas margens e enchimentos */
-    position: relative; /* Permite usar height nos elementos div */
+    position: relative;
+    /* Permite usar height nos elementos div */
     margin: 0;
     padding: 0;
     height: 100%;
@@ -48,26 +67,32 @@ body {
 Reset dos títulos e parágrafos
 trocando margin por padding
  */
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
     padding: .5rem;
 }
 
 /* Padroniza links */
 a {
-    color: steelblue;
+    color: var(--default-links);
     text-decoration: none;
 }
 
 a:hover {
-    color: orangered;
+    color: var(--default-links-hover);
 }
 
 /* Tela de fundo */
-body{
+body {
     /* background: linear-gradient(to right, blue, red, cyan);; */
-    background-image: url("../img/imagem\ de\ fundo.jpg");
-    background-color: black;
+     /* background-image: var(--body-background-image); */
+    background-color: var(--body-background-color);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,35 +108,31 @@ body{
 
 /* Elemento Wrap */
 #wrap {
-    max-width: 1080px;
+    max-width:  var(--wrap-max-width);
     margin: auto;
     position: relative;
     height: 100%;
-}
-
-
-
-/* Imagem responsiva */
-.azul {
-    width: auto;
-    max-width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Cabeçalho da página */
 
 /* header é filho direto de #wrap (>) */
-#wrap > header {
-    background-color: orange;
+#wrap>header {
+    background-color:  var(--header-background-color);
     border-radius: .5rem;
     margin: .5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #wrap>header img {
     display: block;
     width: 90px;
-    border-radius:50% ;
-    margin: 5rem;
+    border-radius: 50%;
+    margin: .5rem;
+   
 
 }
 
@@ -119,21 +140,25 @@ body{
 .logotitle {
     display: flex;
     align-items: center;
-    
+
 }
 
-.logotitle h1{
-    font-family: Arial, Helvetica, sans-serif;
+.logotitle h1 {
+    font-family: var(--header-logo-font);
     font-weight: bold;
-     /* Experimental: adicionar uma borda ao texto */
-    -webkit-text-stroke: .75px white;
+    /* Experimental: adicionar uma borda ao texto */
+    -webkit-text-stroke: var(--header-title-stroke);
 }
+
+
 /* Formulário de pesquisa */
 .header-search {
     padding: 1rem;
     display: flex;
-    
+    border-top: var(--top-search-border);
+
 }
+
 /* Filhos do formulário */
 .header-search input,
 .header-search button {
@@ -141,9 +166,10 @@ body{
     font-size: inherit;
     border: none;
 }
+
 /*Só com o campo de pesquisa*/
 .header-search input {
-    padding:  .5rem 1rem;
+    padding: .5rem 1rem;
     flex-grow: 1;
     border-radius: .3rem 0 0 .3rem;
 }
@@ -153,7 +179,98 @@ body{
     border-radius: 0 .3rem .3rem 0;
     cursor: pointer;
 }
+
+
 /* Menu principal */
-#wrap > nav {
-    background-color: black;
+#wrap>nav {
+    background-color:  var(--nav-footer-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: .5rem;
+    margin-top: 0;
+    border-radius: .5rem;
+    border: 1px solid black;
+    
+}
+
+#wrap>nav a:first-child {
+    margin-right: auto;
+    border-radius: .4rem 0 0.4rem;
+}
+
+#wrap>nav a :last-child {
+    border-radius:0 .4rem .4rem 0;
+}
+
+#wrap>nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem;
+    color: var(--nav-menu-color);
+    transition: .2s;
+}
+
+#wrap>nav a:hover {
+    color: var(--nav-menu-hover-color);
+    background-color: var(--nav-menu-hover-bg-color);
+}
+
+#wrap>nav a i {
+    font-size: 1.8rem;
+    padding-bottom: .25rem;
+}
+
+#wrap>main {}
+
+#wrap>main section,
+#wrap>main article,
+#wrap>main aside {
+    margin: .5rem;
+    margin-top: 0;
+    border-radius: .5rem;
+}
+
+
+#wrap>main section,
+ #wrap>main article {
+    background-color: var(--article-section-background-color);
+    padding: 1.5rem;
+    line-height: 1.5;
+}
+
+#wrap>main aside {
+    background-color: var(--aside-background-color);
+}
+
+
+
+/* Media queries para telas de 640px ou mais */
+@media screen and (min-width: 640px) {
+
+    /* Cabeçalho <header> responsivo */
+    #wrap>header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Formulário de pesquisa responsivo */
+    .header-search {
+        border: none;
+    }
+
+    /* Itens do menu principal responsivos */
+    #wrap>nav a {
+        flex-direction: row;
+        padding: .65rem 1rem;
+    }
+
+    /* Ícones do menu principal */
+    #wrap>nav a i {
+    font-size: 1.2rem;
+    padding-right: .25rem;
+}
+
 }
