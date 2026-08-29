@@ -7,7 +7,7 @@
     <!-- Importa o CSS do template (principal) -->
     <link rel="stylesheet" href="css/style.css">
     <!-- folhas de estilo somente desta página -->
-    
+    <link rel="icon" href="img/logo02.jpg">
     <title>FirstSteps</title>
 </head>
 
@@ -20,26 +20,27 @@
         <header>
             <!-- Logotipo clicável para a página inicial -->
             <div class="logotitle">
-               <a href="index.html">
-                  <img src="img/logo02.jpg" alt="Logotipo do FirstSteps">
+                <a href="index.html" id="myLogo">
+                    <img src="img/logo02.jpg" alt="Logotipo do FirstSteps">
                 </a>
-                 <h1>FirstSteps</h1>
+                <h1>FirstSteps</h1>
             </div>
             <form class="header-search" action="https://www.google.com/search" target="_blank" method="get">
                 <input type="search" name="q" placeholder="Pesquisar...">
-                <button type="submit" title="Clique para pesquisar"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-fw"></i></button>
+                <button type="submit" title="Clique para pesquisar"><i
+                        class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-fw"></i></button>
             </form>
 
-         </header>
+        </header>
 
         <nav aria-label="Menu principal">
 
             <a href="index.html" title="Página inicial">
                 <i class="fa-solid fa-house fa-fw"></i>
-                    <span>início</span></a>
+                <span>início</span></a>
             <a href="content.html" title="Conteúdo do site" aria-label="Conteúdo do Site">
-               <i class="fa-solid fa-file-lines fa-fw"></i>
-               <span>Conteúdo</span></a>
+                <i class="fa-solid fa-file-lines fa-fw"></i>
+                <span>Conteúdo</span></a>
             <a href="contacts.html" title="Faça contato" aria-label="Faça contato">
                 <i class="fa-solid fa-comments fa-fw"></i>
                 <span>Contatos</span></a>
@@ -47,24 +48,30 @@
                 <i class="fa-solid fa-circle-info fa-fw"></i>
                 <span>Sobre</span></a>
 
-        </nav >
+        </nav>
 
         <main>
 
             <section>
 
                 <h2>Título desta página</h2>
-                <p class="azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam
+                    ex. Commodi
                     quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
+                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+                    pariatur nesciunt ullam ex. Commodi
                     quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
+                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+                    pariatur nesciunt ullam ex. Commodi
                     quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
+                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+                    pariatur nesciunt ullam ex. Commodi
                     quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
+                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+                    pariatur nesciunt ullam ex. Commodi
                     quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
+                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+                    pariatur nesciunt ullam ex. Commodi
                     quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
                     quasi quia perferendis nostrum?</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos consectetur ut cumque, et atque
@@ -119,9 +126,30 @@
             </a>
 
         </footer>
+        <!-- Hack para margin no final da tela -->
+        <div class="end-margin">&nbsp;</div>
 
     </div>
 
+    <!-- Aviso de cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+
+        <div class="cookie-text">
+            <strong>🍪 Este site utiliza cookies</strong>
+            <p>
+                Utilizamos cookies para melhorar sua experiência de navegação.
+                Ao continuar navegando, você concorda com o uso de cookies.
+            </p>
+        </div>
+
+        <button id="cookie-accept" type="button">
+            Aceitar
+        </button>
+
+    </div>
+
+    <script>const pageName = "Home Page"</script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

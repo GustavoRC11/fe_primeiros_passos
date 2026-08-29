@@ -17,20 +17,21 @@ Referências: https://fontawesome.com
 
 
 :root {
-     --wrap-max-width: 1080px;
-    --defult-links: steelblue;
-    --deful-links-hover: orangered;
-    --backgroud-image:url("../img/logo02.jpg");
-     --body-background-color: rgb(180, 180, 180);
+    --wrap-max-width: 1080px;
+    --dafault-links: steelblue;
+    --dafault-links-hover: orangered;
+    --backgroud-image: url("../img/logo02.jpg");
+    --body-background-color: rgb(180, 180, 180);
     --header-background-color: orange;
     --header-logo-font: Arial, helvetica, sans-serif;
     --header-title-stroke: .75px white;
     --nav-footer-background-color: black;
-    --aside-background-color:#eee;
-    --top-search-border:3px dotted white;
+    --aside-background-color: #eee;
+    --top-search-border: 3px dotted white;
     --nav-menu-color: white;
     --nav-menu-hover-color: white;
-    --nav-menu-hover-bg-color: rgba(255,255,255,.4);
+    --nav-menu-hover-bg-color: rgba(255, 255, 255, .4);
+    --article-section-background-color: white;
 }
 
 
@@ -48,7 +49,7 @@ body {
     /* Permite usar height nos elementos div */
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
 
     /* Fonte padrão e tamanho */
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -75,23 +76,23 @@ h5,
 h6,
 p {
     margin: 0;
-    padding: .5rem;
+    padding: .5rem 0;
 }
 
 /* Padroniza links */
 a {
-    color: var(--default-links);
+    color: var(--dafault-links);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--default-links-hover);
+    color: var(--dafault-links-hover);
 }
 
 /* Tela de fundo */
 body {
     /* background: linear-gradient(to right, blue, red, cyan);; */
-     /* background-image: var(--body-background-image); */
+    /* background-image: var(--body-background-image); */
     background-color: var(--body-background-color);
     background-position: center;
     background-repeat: no-repeat;
@@ -108,10 +109,10 @@ body {
 
 /* Elemento Wrap */
 #wrap {
-    max-width:  var(--wrap-max-width);
+    max-width: var(--wrap-max-width);
     margin: auto;
     position: relative;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -120,7 +121,7 @@ body {
 
 /* header é filho direto de #wrap (>) */
 #wrap>header {
-    background-color:  var(--header-background-color);
+    background-color: var(--header-background-color);
     border-radius: .5rem;
     margin: .5rem;
     display: flex;
@@ -132,7 +133,7 @@ body {
     width: 90px;
     border-radius: 50%;
     margin: .5rem;
-   
+
 
 }
 
@@ -183,7 +184,7 @@ body {
 
 /* Menu principal */
 #wrap>nav {
-    background-color:  var(--nav-footer-background-color);
+    background-color: var(--nav-footer-background-color);
     display: flex;
     align-items: center;
     justify-content: end;
@@ -191,7 +192,7 @@ body {
     margin-top: 0;
     border-radius: .5rem;
     border: 1px solid black;
-    
+
 }
 
 #wrap>nav a:first-child {
@@ -200,7 +201,7 @@ body {
 }
 
 #wrap>nav a :last-child {
-    border-radius:0 .4rem .4rem 0;
+    border-radius: 0 .4rem .4rem 0;
 }
 
 #wrap>nav a {
@@ -211,19 +212,41 @@ body {
     color: var(--nav-menu-color);
     transition: .2s;
 }
-
+/* Ao passar o ponteiro sobre as opções do menu */
 #wrap>nav a:hover {
     color: var(--nav-menu-hover-color);
     background-color: var(--nav-menu-hover-bg-color);
 }
 
+/* Seleciona somente o primeiro elemento filho do tipo <a> */
+#wrap>nav a:first-child {
+    margin-right: auto;
+    border-radius: .4rem 0 0 .4rem;
+}
+
+/* Seleciona somente o último elemento filho do tipo <a> */
+#wrap>nav a:last-child {
+    border-radius: 0 .4rem .4rem 0;
+}
+
+/* Seleciona os ícones → Tag <i> */
 #wrap>nav a i {
     font-size: 1.8rem;
     padding-bottom: .25rem;
 }
 
-#wrap>main {}
 
+/*****************************
+ * Main e conteúdo principal *
+ *****************************/
+#wrap>main {
+
+    display: flex;
+    /* Posiciona os filhos em linhas, um sobre o outro */
+    flex-direction: column;
+}
+
+/* Todos os filhos diretos do <main> */
 #wrap>main section,
 #wrap>main article,
 #wrap>main aside {
@@ -232,19 +255,128 @@ body {
     border-radius: .5rem;
 }
 
-
+/* Elementos com o conteúdo principal */
 #wrap>main section,
- #wrap>main article {
+#wrap>main article {
     background-color: var(--article-section-background-color);
     padding: 1.5rem;
-    line-height: 1.5;
-}
 
+    /* Forçar o footer no final da tela */
+    flex-grow: 1;
+}
+    
+/* Elemento com conteúdo auxiliar */
 #wrap>main aside {
     background-color: var(--aside-background-color);
+     padding: 1rem;
 }
 
 
+/**********
+ * Rodapé *
+ **********/
+
+#wrap>footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-footer-background-color);
+    margin: 0 .5rem;
+    border-radius: .5rem;
+    color: white;
+} 
+
+/* Hack para margem do último elemento */
+.end-margin {
+    font-size: .4rem;
+}
+
+/* Links para a home e topo da página */
+#wrap>footer a {
+    font-size: 2rem;
+    color: var(--nav-menu-color);
+    padding: .25rem;
+}
+
+#wrap>footer a:hover {
+    color: var(--nav-menu-hover-color);
+    background-color: var(--nav-menu-hover-bg-color);
+}
+
+/* Seleciona somente o primeiro elemento filho do tipo <a> */
+#wrap>footer a:first-child {
+    border-radius: .4rem 0 0 .4rem;
+}
+
+/********************
+ * Aviso de Cookies *
+ ********************/
+
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+    color: #222222;
+
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+    z-index: 9999;
+}
+
+.cookie-text {
+    flex: 1;
+}
+
+.cookie-text strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cookie-text p {
+    margin: 0;
+}
+
+#cookie-accept {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004953;
+    color: white;
+    cursor: pointer;
+}
+
+#cookie-accept:hover {
+    opacity: 0.85;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #cookie-accept {
+        width: 100%;
+    }
+}
+
+/**********************************
+ * Responsividade e Media Queries *
+ **********************************/
 
 /* Media queries para telas de 640px ou mais */
 @media screen and (min-width: 640px) {
@@ -269,8 +401,28 @@ body {
 
     /* Ícones do menu principal */
     #wrap>nav a i {
-    font-size: 1.2rem;
-    padding-right: .25rem;
-}
+        font-size: 1.2rem;
+        padding-right: .25rem;
+    }
+
+    /* Quando a largura da tela for de 768px ou mais */
+    @media screen and (min-width: 768px) {
+
+        #wrap>main {
+            /* Posiciona os filhos em linhas, um sobre o outro */
+            flex-direction: row;
+        }
+
+
+        /* Elemento com conteúdo auxiliar */
+        #wrap>main aside {
+            margin-left: 0;
+
+        /*Fixa a lagura do <aside> em 220px */
+        min-width: 220px;
+        max-width: 220px; 
+        }
+
+    }
 
 }
