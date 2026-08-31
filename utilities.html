@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Importa o CSS do template (principal) -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- folhas de estilo somente desta página -->
+    <link rel="icon" href="img/logo02.jpg">
     <title>FirstSteps</title>
 </head>
 
@@ -17,77 +19,124 @@
 
         <header>
             <!-- Logotipo clicável para a página inicial -->
-            <a href="index.html">
-                <img src="img/logo01.jpg" alt="Logotipo do FirstSteps">
-            </a>
-            <h1>FirstSteps</h1>
-            <form action="https://www.google.com/search" target="_blank" method="get">
-                <input type="search" name="q">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-fw"></i></button>
+            <div class="logotitle">
+                <a href="index.html" id="myLogo">
+                    <img src="img/logo02.jpg" alt="Logotipo do FirstSteps">
+                </a>
+                <h1>Página das Águias</h1>
+            </div>
+            <form class="header-search" action="https://www.google.com/search" target="_blank" method="get">
+                <input type="search" name="q" placeholder="Pesquisar...">
+                <button type="submit" title="Clique para pesquisar"><i
+                        class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-fw"></i></button>
             </form>
 
-         </header>
+        </header>
 
-        <nav>
+        <nav aria-label="Menu principal">
 
-            <a href="index.html">Início</a>
-            <a href="content.html">Conteúdo</a>
-            <a href="contacts.html">Contatos</a>
-            <a href="about.html">Sobre</a>
+            <a href="index.html" title="Página inicial">
+                <i class="fa-solid fa-house fa-fw"></i>
+                <span>início</span></a>
+            <a href="utilities.html" title="Conteúdo do site" aria-label="Conteúdo do Site">
+                <i class="fa-solid fa-file-lines fa-fw"></i>
+                <span>Conteúdo</span></a>
+            <a href="contacts.html" title="Faça contato" aria-label="Faça contato">
+                <i class="fa-solid fa-comments fa-fw"></i>
+                <span>Contatos</span></a>
+            <a href="about.html" title=" Mais informações" aria-label="Mais informações">
+                <i class="fa-solid fa-circle-info fa-fw"></i>
+                <span>Sobre</span></a>
 
         </nav>
 
-        <main>
+         <main>
 
             <section>
 
-                <h2>Título desta página</h2>
-                <p class="azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
-                    quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
-                    quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
-                    quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
-                    quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
-                    quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur nesciunt ullam ex. Commodi
-                    quam ducimus beatae porro possimus exercitationem consequatur accusantium quis, dicta quas illo
-                    quasi quia perferendis nostrum?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos consectetur ut cumque, et atque
-                    suscipit excepturi totam laudantium earum, soluta delectus eum officia distinctio, eligendi
-                    aspernatur obcaecati minima accusantium ex!</p>
+                <h2> O Mundo das Águias 🦅</h2>
 
-                <p>Lista de Links:</p>
-                <!-- Lista NÃO ordenada -->
-                <ul>
-                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                    <li><a href="https://catabits.com.br" target="_blank">Site do Fessô</a></li>
-                    <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
-                </ul>
+                <h3>Conhecendo as Águias</h3>
+
+
+                <p class="azul">
+                    As águias são aves de rapina conhecidas por sua força, velocidade e capacidade de caça. Elas
+                    pertencem à família Accipitridae e podem ser encontradas em diferentes regiões do mundo.
+
+                    Com suas grandes asas, garras poderosas e bico curvo, as águias possuem características
+                    especialmente adaptadas para a caça e a sobrevivência na natureza.</p>
+                <h3> Uma visão extraordinária</h3>
+                <p>A visão é uma das características mais impressionantes das águias. Seus olhos são altamente
+                    desenvolvidos e permitem identificar movimentos e possíveis presas a grandes distâncias.
+
+                    Essa capacidade é fundamental para uma ave que passa boa parte do tempo observando o ambiente
+                    enquanto voa.</p>
+
+                <h3>O poder do voo</h3>
+                <p>As asas das águias permitem que elas voem e planem por grandes distâncias. Aproveitando as correntes
+                    de ar, algumas espécies conseguem permanecer no céu durante bastante tempo sem gastar tanta energia.
+
+                    Durante o voo, elas podem observar o território em busca de alimento e também utilizar sua
+                    velocidade para realizar ataques rápidos.</p>
+
+
 
                 <img class="azul" src="https://picsum.photos/400/200" alt="Imagem aleatória">
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eius libero quos, commodi explicabo
-                    voluptates voluptas temporibus nam facilis dolorum, dicta rerum repellendus! Minima numquam deleniti
-                    sapiente quibusdam, vero molestias.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur voluptatem sequi deserunt id?
-                    Odio modi ex voluptatem et voluptate itaque earum recusandae soluta? Molestias suscipit esse
-                    cupiditate doloribus eum!</p>
+                <h3>Garras e bico</h3>
+                <p>As garras, chamadas de talões, são fortes e afiadas. Elas são utilizadas principalmente para capturar
+                    e segurar as presas.
 
-                <!-- Folha de estilos "inline" -->
-                <p class="azul">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora commodi, dicta aliquam
-                    beatae sint libero similique necessitatibus quod ratione deleniti consequuntur amet aperiam aut.
-                    Commodi quia dicta cupiditate odit provident.</p>
+                    O bico curvo e resistente também é uma importante ferramenta para alimentar-se e manipular
+                    alimentos.</p>
+                <h3>Onde vivem?</h3>
+                <p>As diferentes espécies de águias ocupam diversos ambientes, como:
+
+                <ul>
+                    <li> Montanhas</li>
+                    <li>Floresta</li>
+                    <li>Regiões costeiras</li>
+                    <li>Campos e áreas abertas</li>
+                    <l>Próximas a rios e lagos</l>
+
+                </ul>
+
+                <p>Cada espécie possui adaptações específicas para o ambiente em que vive.</p>
+
+                <h3>Alimentação</h3>
+                <p class="azul">A alimentação varia de acordo com a espécie e o local onde a águia vive. Algumas podem
+                    se alimentar de pequenos mamíferos e aves, enquanto outras possuem maior especialização para
+                    capturar peixes.
+
+                    Como predadoras, elas desempenham um papel importante na cadeia alimentar e contribuem para o
+                    equilíbrio dos ecossistemas.</p>
+
+                <h3> Reprodução e cuidados</h3>
+                <p>As águias geralmente constroem grandes ninhos em locais elevados, como árvores, penhascos ou outras
+                    estruturas adequadas.
+
+                    Os filhotes permanecem sob os cuidados dos pais durante uma fase importante do desenvolvimento,
+                    aprendendo gradualmente habilidades necessárias para sobreviver de forma independente.</p>
+
+                <h3> Símbolo de força e liberdade</h3>
+                <p>Além de sua importância ecológica, as águias possuem um forte significado cultural. Em diferentes
+                    sociedades, elas são associadas a conceitos como liberdade, coragem, força, liderança e
+                    determinação.
+
+                    Sua capacidade de voar alto e dominar grandes territórios ajudou a transformar essas aves em
+                    símbolos presentes em bandeiras, brasões e diversas representações culturais.</p>
+
+                <h3> Preservação</h3>
+                <p>A conservação das águias depende da proteção dos ambientes onde elas vivem. A destruição de habitats,
+                    a redução de alimentos disponíveis e outras ações humanas podem representar ameaças para
+                    determinadas espécies.
+
+                    Proteger florestas, rios, montanhas e outras áreas naturais é uma maneira de contribuir para a
+                    preservação dessas incríveis aves.</p>
 
             </section>
 
-            <aside>
-                <h3>Coisas Auxiliares</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate aliquid molestiae harum qui
-                    voluptatibus sapiente eum totam dolorem.</p>
-            </aside>
+            
 
         </main>
 
@@ -107,9 +156,30 @@
             </a>
 
         </footer>
+        <!-- Hack para margin no final da tela -->
+        <div class="end-margin">&nbsp;</div>
 
     </div>
 
+    <!-- Aviso de cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+
+        <div class="cookie-text">
+            <strong>🍪 Este site utiliza cookies</strong>
+            <p>
+                Utilizamos cookies para melhorar sua experiência de navegação.
+                Ao continuar navegando, você concorda com o uso de cookies.
+            </p>
+        </div>
+
+        <button id="cookie-accept" type="button">
+            Aceitar
+        </button>
+
+    </div>
+
+    <script>const pageName = "Home Page"</script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

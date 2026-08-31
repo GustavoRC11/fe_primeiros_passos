@@ -20,18 +20,18 @@ Referências: https://fontawesome.com
     --wrap-max-width: 1080px;
     --dafault-links: steelblue;
     --dafault-links-hover: orangered;
-    --backgroud-image: url("../img/logo02.jpg");
+    --body-background-image: url("../img/bgaguia.png");
     --body-background-color: rgb(180, 180, 180);
     --header-background-color: orange;
     --header-logo-font: Arial, helvetica, sans-serif;
     --header-title-stroke: .75px white;
     --nav-footer-background-color: black;
-    --aside-background-color: #eee;
+    --aside-background-color: rgba(238, 238, 238, 0.8);
     --top-search-border: 3px dotted white;
     --nav-menu-color: white;
     --nav-menu-hover-color: white;
     --nav-menu-hover-bg-color: rgba(255, 255, 255, .4);
-    --article-section-background-color: white;
+    --article-section-background-color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -92,7 +92,7 @@ a:hover {
 /* Tela de fundo */
 body {
     /* background: linear-gradient(to right, blue, red, cyan);; */
-    /* background-image: var(--body-background-image); */
+    background-image: var(--body-background-image); 
     background-color: var(--body-background-color);
     background-position: center;
     background-repeat: no-repeat;
